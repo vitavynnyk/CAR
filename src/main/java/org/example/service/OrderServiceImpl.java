@@ -3,13 +3,9 @@ package org.example.service;
 import lombok.RequiredArgsConstructor;
 import org.example.exception.InappropriateStatusException;
 import org.example.exception.InvalidIdException;
-import org.example.model.GarageSlot;
-import org.example.model.GarageSlotStatus;
-import org.example.model.Order;
-import org.example.model.OrderStatus;
-import org.example.model.Repairer;
-import org.example.model.RepairerStatus;
+import org.example.model.*;
 import org.example.repository.OrderRepository;
+
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;

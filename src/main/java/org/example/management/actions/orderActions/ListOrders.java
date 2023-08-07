@@ -1,8 +1,8 @@
 package org.example.management.actions.orderActions;
 
-import org.example.service.SortType;
 import org.example.management.actions.Action;
 import org.example.management.actions.initServices.OrderServiceInit;
+import org.example.service.SortType;
 
 public class ListOrders extends OrderServiceInit implements Action {
     @Override
