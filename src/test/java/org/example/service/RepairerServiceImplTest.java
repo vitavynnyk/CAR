@@ -13,17 +13,17 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RepairerServiceImplTest {
 
-    private RepairerRepository repairerRepository;
-    private RepairerServiceImpl repairerService;
-    private final String name1 = "Artem Dou";
-    private final String name2 = "Oleg Ivanov";
+    private static RepairerRepository repairerRepository;
+    private static RepairerServiceImpl repairerService;
+    private static final String name1 = "Artem Dou";
+    private static final String name2 = "Oleg Ivanov";
 
 
     @BeforeAll
-    void init() {
+    static void  init() {
         repairerRepository = new RepairerRepositoryImpl();
         repairerService = new RepairerServiceImpl(repairerRepository);
         repairerService.save(name1);
