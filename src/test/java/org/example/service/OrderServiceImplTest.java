@@ -5,18 +5,12 @@ import org.example.exception.InvalidIdException;
 import org.example.model.Order;
 import org.example.model.OrderStatus;
 import org.example.model.RepairerStatus;
-import org.example.repository.GarageSlotRepository;
-import org.example.repository.GarageSlotRepositoryImpl;
-import org.example.repository.OrderRepository;
-import org.example.repository.OrderRepositoryImpl;
-import org.example.repository.RepairerRepository;
-import org.example.repository.RepairerRepositoryImpl;
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.example.repository.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class OrderServiceImplTest {
 
