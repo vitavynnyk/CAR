@@ -5,9 +5,7 @@ import org.example.model.Repairer;
 import org.example.model.RepairerStatus;
 import org.example.repository.RepairerRepository;
 import org.example.repository.RepairerRepositoryImpl;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 
 import java.util.List;
 
@@ -16,20 +14,23 @@ import static org.junit.jupiter.api.Assertions.*;
 //@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RepairerServiceImplTest {
 
-    private static RepairerRepository repairerRepository;
-    private static RepairerServiceImpl repairerService;
-    private static final String name1 = "Artem Dou";
-    private static final String name2 = "Oleg Ivanov";
+    private  RepairerRepository repairerRepository;
+    private  RepairerServiceImpl repairerService;
+    private  final String name1 = "Artem Dou";
+    private  final String name2 = "Oleg Ivanov";
 
 
-    @BeforeAll
-    static void  init() {
+    @BeforeEach
+     void  init() {
         repairerRepository = new RepairerRepositoryImpl();
         repairerService = new RepairerServiceImpl(repairerRepository);
         repairerService.save(name1);
         repairerService.save(name2);
     }
-
+    @AfterEach
+    public void tearDown() {
+        repairerService.getAll().clear();
+    }
 
     @Test
     void shouldSaveRepairerByName() {
